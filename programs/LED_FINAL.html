@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Draft//EN">
+<HTML>
+<HEAD>
+<Script Language="JavaScript">
+var userAgent = navigator.userAgent;
+var versionOffset = userAgent.indexOf("Chrome");
+
+if (versionOffset != -1)
+{
+    var fullVersion = userAgent.substring(versionOffset+7);
+    var majorVersion = parseInt(''+fullVersion,10);
+    if (majorVersion >= 42)
+    {
+	var plugins = navigator.plugins;
+	var hasNIPlugin = false;
+	for (var i = 0; i < plugins.length; i++) {
+		if (plugins[i].name.indexOf("National Instruments") != -1) {
+			hasNIPlugin = true;
+		}
+	}
+	if (hasNIPlugin == false) {
+        	document.write('<strong><em>NI has detected that your ' +
+                               'browser might be blocking a plug-in.  '+
+                               'Visit ni.com/info and enter the following '+
+                               'Info Code for more information: '+
+                               'BlockedPlugin</em></strong>')
+	}
+    }
+}
+</Script>
+<TITLE>HALF ADDER</TITLE>
+</HEAD>
+<BODY >
+<H1>HALF ADDER</H1>
+<P>
+<TABLE BORDER=1 BORDERCOLOR = #000000><TR><TD>
+<OBJECT ID="LabVIEWControl" CLASSID="CLSID:A40B0AD4-B50E-4E58-8A1D-8544233807BA" WIDTH=1360 HEIGHT=698 CODEBASE="ftp://ftp.ni.com/support/labview/runtime/windows/2018/LVRTE2018min.exe">
+<PARAM name="LVFPPVINAME" value="LED_FINAL.vi">
+<PARAM name="REQCTRL" value=true>
+<EMBED SRC=".LV_FrontPanelProtocol.rpvi180" LVFPPVINAME="LED_FINAL.vi" REQCTRL=true TYPE="application/x-labviewrpvi180" WIDTH=1360 HEIGHT=698  PLUGINSPAGE="http://digital.ni.com/express.nsf/bycode/exck2m">
+</EMBED>
+</OBJECT>
+</TD></TR></TABLE>
+<P>
+Definition - What does Half Adder mean?
+A half adder is a type of adder, an electronic circuit that performs the addition of numbers. The half adder is able to add two single binary digits and provide the output plus a carry value. It has two inputs, called A and B, and two outputs S (sum) and C (carry). The common representation uses a XOR logic gate and an AND logic gate.
+</BODY>
+</HTML>
